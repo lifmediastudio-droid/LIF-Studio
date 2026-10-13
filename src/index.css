@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-serif: 'Playfair Display', Georgia, Cambria, serif;
+  }
+
+  html {
+    background-color: #06070B;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    margin: 0;
+    background-color: #06070B;
+    color: #F8F9FA;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-position: center top;
+    background-attachment: fixed;
+  }
+}
+
+/* Coordinate Grid Pattern */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-position: center top;
+}
+
+@media (max-width: 640px) {
+  body, .bg-grid-pattern {
+    background-size: 20px 20px;
+  }
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* ========================================================
+   CLEAN LUXURY BUTTONS & EDITORIAL STYLES (NO GLITTER)
+   ======================================================== */
+
+/* Primary Crisp White CTA Button */
+.btn-primary,
+.btn-glitter-cosmic {
+  position: relative;
+  background-color: #FFFFFF;
+  color: #06070B;
+  font-weight: 700;
+  border-radius: 9999px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+.btn-primary:hover,
+.btn-glitter-cosmic:hover {
+  background-color: #E2E8F0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+}
+
+.btn-primary:active,
+.btn-glitter-cosmic:active {
+  transform: translateY(0);
+}
+
+/* Secondary Sleek Outline Button */
+.btn-secondary,
+.btn-outline-cosmic {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #F8F9FA;
+  border-radius: 9999px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-secondary:hover,
+.btn-outline-cosmic:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #FFFFFF;
+  transform: translateY(-1.5px);
+}
+
+.btn-secondary:active,
+.btn-outline-cosmic:active {
+  transform: translateY(0);
+}
+
+/* Sleek Badge / Pill */
+.badge-pill,
+.badge-glitter {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #F8F9FA;
+  transition: all 0.2s ease;
+}
+
+.badge-pill:hover,
+.badge-glitter:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Clean Editorial Text Gradient */
+.text-silver {
+  background: linear-gradient(180deg, #FFFFFF 0%, #D4D4D8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-glitter,
+.text-glitter-silver,
+.text-glitter-cosmic {
+  background: linear-gradient(180deg, #FFFFFF 0%, #E2E8F0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Cosmic Surface Card */
+.cinematic-surface {
+  background-color: rgba(14, 16, 26, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cinematic-surface-hover:hover {
+  border-color: rgba(255, 255, 255, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.7);
+}
